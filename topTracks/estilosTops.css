@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Righteous|Russo+One');
+html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+}
+a{
+	color: black;
+	text-decoration: none;
+}
+body{
+	color:black;
+	margin: 0px;
+	background-color: black;
+	width: 100%;
+}
+.sectionTop{
+	background: url(images/backgroundTop.jpg) no-repeat 50% 50%;
+	background-size: cover ;
+	width: 100%;
+	height: 180vh;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+	
+  background-attachment: fixed;
+
+}
+.title{
+	top:4%;
+	font-family: 'Russo One', sans-serif;
+	line-height: 60px;
+  
+    float: left;
+    margin: 16px 46px;
+    color: #fff;
+  	margin: 0px;
+    font-size: 20px;
+    letter-spacing: 2px;
+	color: white;
+	position:relative;
+	width: 100%;
+	background-color: black;
+	text-align: center;
+}
+
+    
+    .title:hover:before{opacity: 1; transform: translate(0,0);}
+    .title:before{
+      content: attr(data-hover);
+      position: absolute;
+            left: 0;
+      width: 100%;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 800px;
+      font-size: .8em;
+      opacity: 0;
+      transform: translate(-100%,0);
+      transition: all .3s ease-in-out;
+    }
+  	  .title:hover div{opacity: 0; transform: translate(100%,0)}
+      .title div{
+      	text-align: center;
+      	margin-top: 0px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 800px;
+        font-size: .8em;
+        transition: all .3s ease-in-out;
+        vertical-align: center;
+      }
+
+.logo{
+	line-height: 60px;
+    position: fixed;
+    float: left;
+    margin: 16px 46px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+nav{
+	font-family: 'Montserrat', sans-serif;
+	position: fixed;
+    width: 100%;
+    line-height: 60px;
+    z-index: 2;
+}
+
+
+
+nav ul {
+      line-height: 60px;
+      list-style: none;
+      background: rgba(0, 0, 0, 0);
+      overflow: hidden;
+      color: #fff;
+      padding: 0;
+      text-align: right;
+      margin: 0;
+      padding-right: 40px;
+      transition: 1s;
+}
+
+nav.black ul {
+      background: #000;
+}
+
+nav ul li {
+      display: inline-block;
+      padding: 16px 40px;
+     
+  }
+
+nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+}
+
+.menu-icon {
+      line-height: 60px;
+      width: 100%;
+      background: #000;
+      text-align: right;
+      box-sizing: border-box;
+      padding: 15px 24px;
+      cursor: pointer;
+      color: #fff;
+      display: none;
+}
+.button{transition:all 0.5s;}
+.button:hover {
+
+    opacity: 0.5;
+    text-decoration: underline;
+
+}
+.block{
+	font-family: 'Montserrat', sans-serif;
+	top:7%;
+	position: relative;
+  display: flex;
+  align-items: center;
+	background-color: rgba(125,125,127,0.5);
+	height: 23%;
+	text-align: center;
+	width: 20%;
+	margin:8px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	transition: all 0.4s;
+}
+.block:hover{
+	background-color: rgba(236, 240, 241,0.9); 
+
+}
+.block .descrip {
+	color:black;
+  text-shadow: 0px 0px 5px #ccc;
+  display: none;
+  position: absolute;
+  font-size: 20px;
+  
+}
+.image{
+  position: relative;
+	width: 90%;
+	height: 90%;
+  left: 5%;
+	transition: all 1s;
+}
+.block:hover .image{
+    -moz-transform:scale(0.9);
+    transform:scale(0.9);
+    opacity: 0.4;
+      	
+ }
+ .genres{
+ 	background: url(images/backgroundGenres.jpg) no-repeat 50% 50%;
+	background-size: cover ;
+  background-position: center;    
+  background-attachment: fixed;
+
+	width: 100%;
+	height: 180vh;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+ }
+ .blockGenres {
+
+ 	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+ 	text-align: center;
+
+ }
+ .blockGenres a{
+ 	color: white;
+ 	font-size: 200%;
+ }
+ .blockGenres:hover a{
+ 	color: black;
+ }
+#reproductor{
+  display: none;
+  background-color:transparent;
+  width: 100%;
+  height:195px;
+  position: sticky;
+  bottom: 0px;
+}
+#player {
+  width: 85%;
+  height: 100%;
+  position: relative;
+  left: 1.4%;
+   border: 1px solid #D0D0D0;
+  background-color: black;
+  color: white;
+  border-radius: 10px 10px 10px 10px;
+}
+.cover {
+  border: 1px solid #D0D0D0;
+  position: relative;
+  width: 12.3%;
+  height: 100%;
+  left: 1%;
+  border-radius: 10px 10px 10px 10px;
+}
+/*Desde aca*/
+#player .container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  border-radius: 0px 0px 10px 10px;
+}
+#player .info {
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #FFF;
+}
+#player .info .cont {
+    text-align: center;
+    padding-top: 21px;
+}
+
+#player .trackinfo p {
+  font-family: 'Helvetica';
+  text-shadow: 0px 0px 5px #ccc;
+  display: flex;
+  justify-content: center;
+   
+}
+#player .trackinfo #title {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: -5px;
+}
+#player .trackinfo #artist {
+    
+    font-size: 16px;
+}
+#track {
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    background-color: #A6A7A9;
+    bottom: 50%;
+    left: 1px;
+    z-index: 10;
+    cursor: pointer;
+}
+#progress {
+    float: left;
+    height: 5px;
+    width: 0%;
+    background: #00CC99;
+    cursor: pointer;
+}
+#handler {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #00CC99;
+    top: 50%;
+    left: 0%;
+    margin-left: -10px;
+    margin-top: -10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 5;
+}
+.nav {
+    width: 50px;
+    height: 49px;
+    vertical-align: top;
+    background-color: #FFF;
+    border: 2px solid #00CC99;
+    border-radius: 50%;
+    outline: none;
+    margin: 0 7px;
+    cursor: pointer;
+}
+.nav:hover {
+    background-color: #00CC99;
+}
+.nav img {
+    height: 10px;
+    vertical-align: middle;
+}
+.pad {
+    padding-left: 5px;
+    
+}
+#prev {
+    padding-right: 5px;
+    padding-left: 0px; 
+}
+#next {
+    padding-left: 5px;
+    padding-right: 0px; 
+}
+.subtitle{
+  top:-1%;
+}
+footer{
+  display: flex;
+  position: relative;
+  width: 100%;
+  height:100px;
+  background-color:white; 
+}
+.usuarioLogin{
+  position: relative;
+  display: flex;
+  left: 0%;
+  width: 50%;
+  height: 100%;
+  background-color: black;
+  align-items: center;
+  justify-content:flex-start;
+}
+#imagePerfil{
+  width: 9%;
+  height: 65%;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin:16px;
+}
+.perfilItem{
+  position: relative;
+   display: flex;
+  justify-content: center;
+  width: 14%;
+    color: #fff;
+      font-size: 16px;
+      font-family: 'Montserrat', sans-serif;
+
+}
+.perfilItem a {
+    text-decoration: none;
+    color: #fff;
+      font-size: 16px;
+      font-family: 'Montserrat', sans-serif;
+  }
+#subidasEstad{
+  width: 36%;
+}
+.aviso{
+  display: none;
+}
+@media(max-width: 975px) {
+
+      .logo {
+            position: fixed;
+            top: 0;
+            margin-top: 16px;
+            margin-left: 8%;
+      }
+
+      nav ul {
+            max-height: 0px;
+            background: #000;
+
+      }
+
+      nav.black ul {
+            background: #000;
+      }
+
+      .showing {
+            max-height: 34em;
+
+      }
+
+      nav ul li {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+            left: 5%;
+      }
+
+      .menu-icon {
+            display: block;
+      }
+      .button{
+      	left: 10%;
+
+      }
+     
+      .sectionTop{
+      	display: flex;
+      	flex-direction: row;
+      	flex-wrap: wrap;
+      	width: 100%;
+      	height: 100%;
+      	justify-content: center;
+      }
+      .block{
+      	text-align: center;
+      	
+      	vertical-align: top;
+      	width: 40%;
+      	height: 55%;
+      	font-size: 10px;
+      	display: flex;
+      	
+      }
+      .block .descrip{
+        font-size: 15px;
+      }
+     .title{
+      	margin-top: 100px;
+      }
+      .subtitle{
+        top:-10%;
+        margin: 0px;
+      }
+      .genres{
+      	height: 270vh;
+      }
+      .blockGenres{
+      	height:10%;
+      	margin:10px;
+        position: relative;
+        top: -5%;
+      }
+
+      .cover{
+        left: 4%;
+        width: 25%;
+      }
+      #player{
+        left: 4.4%;
+        width: 70%;
+      }
+      #perfil{
+        width: 35%;
+        height: 96%;
+      }
+}
+
+@media(max-width: 544px){
+  #reproductor{
+    height: 126px;
+  }
+  .cover{
+    left: 1%;
+  }
+  #player{
+    left: 2.4%;
+    width: 70%;
+  }
+  #player .trackinfo #title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: -5px;
+  }
+  #player .trackinfo #artist {
+    font-size: 9px;
+}
+}
